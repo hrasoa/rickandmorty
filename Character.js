@@ -9,7 +9,7 @@ class Character extends React.Component {
     const { singleCharacter, characters, navigation } = this.props;
     const id = navigation.getParam('id', null);
     if (!(id && characters[id])) {
-      this.props.singleCharacter(id);
+      singleCharacter(id);
     }
   }
 
