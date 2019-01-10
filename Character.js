@@ -14,38 +14,44 @@ class Character extends React.Component {
   }
 
   render() {
-    const { navigation, characters } = this.props;
+    const { navigation, characters, loading, error } = this.props;
     const id = navigation.getParam('id', null);
     const character = characters[id];
     return (
       <View style={styles.container}>
         <View>
-          <Avatar
-            containerStyle={styles.section}
-            xlarge
-            rounded
-            source={{ uri: character.image }}
-          />
-          <View style={styles.section}>
-            <Text style={styles.headlines}>Name</Text>
-            <Text>{character.name}</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.headlines}>Status</Text>
-            <Text>{character.status}</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.headlines}>Species</Text>
-            <Text>{character.species}</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.headlines}>Origin</Text>
-            <Text>{character.origin.name}</Text>
-          </View>
-          <View style={styles.section}>
-            <Text style={styles.headlines}>Gender</Text>
-            <Text>{character.gender}</Text>
-          </View>
+          {loading && <Text style={styles.headlines}>Loading...</Text>}
+          {!loading && error && <Text style={styles.headlines}>{error}</Text>}
+          {!loading && !error && character && (
+            <View>
+              <Avatar
+                containerStyle={styles.section}
+                xlarge
+                rounded
+                source={{ uri: character.image }}
+              />
+              <View style={styles.section}>
+                <Text style={styles.headlines}>Name</Text>
+                <Text>{character.name}</Text>
+              </View>
+              <View style={styles.section}>
+                <Text style={styles.headlines}>Status</Text>
+                <Text>{character.status}</Text>
+              </View>
+              <View style={styles.section}>
+                <Text style={styles.headlines}>Species</Text>
+                <Text>{character.species}</Text>
+              </View>
+              <View style={styles.section}>
+                <Text style={styles.headlines}>Origin</Text>
+                <Text>{character.origin.name}</Text>
+              </View>
+              <View style={styles.section}>
+                <Text style={styles.headlines}>Gender</Text>
+                <Text>{character.gender}</Text>
+              </View>
+            </View>
+          )}
         </View>
       </View>
     );
@@ -69,8 +75,10 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => {
-  const { characters } = state;
+  const { characters, error, loading } = state;
   return {
+    error,
+    loading,
     characters,
   };
 };
@@ -83,3 +91,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(Character);
+
+export { Character };

@@ -5,6 +5,10 @@ import { connect } from 'react-redux';
 import { listCharacters } from './reducer';
 
 class CharactersList extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     const { listCharacters, charactersList } = this.props;
     if (!charactersList.length) {
@@ -79,3 +83,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CharactersList);
+
+export { CharactersList };

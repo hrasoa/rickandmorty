@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "height": 150,
+              "paddingBottom": 10,
+              "paddingRight": 10,
+              "paddingTop": 10,
+              "width": 150,
+            },
+            Object {
+              "borderRadius": 75,
+            },
+            Object {
+              "marginBottom": 24,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "rgba(0,0,0,0.2)",
+                "bottom": 0,
+                "flex": 1,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "borderRadius": 75,
+              },
+              undefined,
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "height": 150,
+                  "width": 150,
+                },
+                Object {
+                  "borderRadius": 75,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          Name
+        </Text>
+        <Text>
+          Rick Sanchez
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          Status
+        </Text>
+        <Text>
+          Alive
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          Species
+        </Text>
+        <Text>
+          Human
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          Origin
+        </Text>
+        <Text>
+          Earth (C-137)
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "fontWeight": "bold",
+              "marginBottom": 4,
+            }
+          }
+        >
+          Gender
+        </Text>
+        <Text>
+          Male
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders error state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "marginBottom": 4,
+        }
+      }
+    >
+      Error ...
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`renders loading state 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontWeight": "bold",
+          "marginBottom": 4,
+        }
+      }
+    >
+      Loading...
+    </Text>
+  </View>
+</View>
+`;

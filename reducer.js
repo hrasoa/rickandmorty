@@ -6,7 +6,7 @@ export const GET_CHARACTER_SUCCESS = 'LOAD_CHARACTER_SUCCESS';
 export const GET_CHARACTER_FAIL = 'LOAD_CHARACTER_FAIL';
 
 export default function reducer(
-  state = { characters: {}, charactersList: [], info: {} },
+  state = { characters: {}, charactersList: [], info: {}, error: null },
   action
 ) {
   switch (action.type) {
@@ -16,6 +16,7 @@ export default function reducer(
       return {
         ...state,
         loading: false,
+        error: null,
         info: { ...state.info, ...action.payload.data.info },
         characters: {
           ...state.characters,

@@ -4,7 +4,8 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -24,7 +25,15 @@
     "eslint-plugin-react": "^7.12.3",
     "eslint-plugin-react-native": "^3.6.0",
     "expo-cli": "^2.6.14",
-    "prettier": "1.15.3"
+    "jest-expo": "^32.0.0",
+    "prettier": "1.15.3",
+    "react-test-renderer": "^16.7.0"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
+  }
 }
